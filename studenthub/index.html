@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Learn. Practice. Build. Grow. | Student Learning Platform</title>
+  <meta name="description" content="Your all-in-one learning space for college students in programming, computer science, web development, and technical interview preparation.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body class="page-home">
+
+  <!-- ================= Navigation Bar ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="StudentHub Home">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">Student<span>Hub</span></div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#topics" class="nav-link">Topics</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="#videos" class="nav-link">Videos</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="signup.html" class="nav-link">Sign Up</a>
+      </nav>
+
+      <!-- Action Items: Search, Theme Toggle, Auth Buttons, Mobile Hamburger -->
+      <div class="nav-actions">
+        <!-- Search Trigger Button -->
+        <button type="button" class="search-trigger-btn" aria-label="Search resources">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Auth Buttons Container (Dynamically updated via auth.js) -->
+        <div class="nav-auth-actions">
+          <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= 3. Hero Section ================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-glow-left"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Empowering 10,000+ College Engineers</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="gradient-text">Learn. Practice.</span><br>
+            Build. Grow.
+          </h1>
+
+          <p class="hero-subtitle">
+            "Your all-in-one learning space for programming, development, and technical skills."
+          </p>
+
+          <div class="hero-actions">
+            <a href="#topics" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-rocket"></i>
+              Start Learning
+            </a>
+            <a href="courses.html" class="btn btn-secondary btn-lg">
+              <i class="fa-solid fa-compass"></i>
+              Explore Courses
+            </a>
+          </div>
+
+          <!-- Statistics Counters -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3 class="stat-counter" data-target="500" data-suffix="+">500+</h3>
+              <p>Learning Resources</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-counter" data-target="50" data-suffix="+">50+</h3>
+              <p>Topics</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-counter" data-target="20" data-suffix="+">20+</h3>
+              <p>Coding Courses</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-counter" data-target="10" data-suffix="K+">10K+</h3>
+              <p>Students</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Coding Dashboard Illustration / Card -->
+        <div class="hero-visual">
+          <!-- Floating Overlay 1: Live Streak -->
+          <div class="floating-badge floating-badge-1">
+            <div class="badge-icon purple">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="badge-info">
+              <h4>7 Days Streak!</h4>
+              <p>Consistency is key to mastery</p>
+            </div>
+          </div>
+
+          <!-- Code Mockup Card -->
+          <div class="code-mockup-card">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <div class="mockup-tabs">
+                <span class="mockup-tab active">Solution.java</span>
+                <span class="mockup-tab">test.py</span>
+                <span class="mockup-tab">main.cpp</span>
+              </div>
+            </div>
+
+            <div class="mockup-body">
+<pre><code><span class="code-comment">// Welcome to StudentHub Platform</span>
+<span class="code-keyword">public class</span> <span class="code-class">StudentHub</span> {
+    <span class="code-keyword">public static void</span> <span class="code-func">main</span>(String[] args) {
+        Student learner = <span class="code-keyword">new</span> <span class="code-class">Student</span>(<span class="code-str">"College Engineer"</span>);
+        learner.<span class="code-func">enroll</span>(<span class="code-str">"Data Structures & Algorithms"</span>);
+        
+        <span class="code-keyword">while</span> (learner.<span class="code-func">isPracticing</span>()) {
+            learner.<span class="code-func">solveProblems</span>();
+            learner.<span class="code-func">buildProjects</span>();
+            learner.<span class="code-func">levelUp</span>();
+        }
+        
+        System.out.<span class="code-func">println</span>(<span class="code-str">"Placement Ready! 🚀"</span>);
+    }
+}</code></pre>
+            </div>
+
+            <div class="mockup-footer">
+              <div class="terminal-status">Compilation: 0 Errors (12ms)</div>
+              <div style="color: #6c7086;">UTF-8 • Java 21</div>
+            </div>
+          </div>
+
+          <!-- Floating Overlay 2: Course Completed -->
+          <div class="floating-badge floating-badge-2">
+            <div class="badge-icon green">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="badge-info">
+              <h4>DSA Mastery</h4>
+              <p>Lesson 28/35 Complete</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. Quick Search Section ================= -->
+    <section class="quick-search-section">
+      <div class="container">
+        <div class="search-container">
+          <div class="search-box-large">
+            <i class="fa-solid fa-magnifying-glass search-icon-left"></i>
+            <input 
+              type="text" 
+              id="hero-search-input" 
+              class="search-input-field" 
+              placeholder="What do you want to learn today?" 
+              autocomplete="off"
+            >
+            <button type="button" id="hero-search-clear" class="search-clear-btn" aria-label="Clear search input">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button type="button" class="btn btn-primary" onclick="document.getElementById('hero-search-input').dispatchEvent(new Event('input'))">
+              Search
+            </button>
+          </div>
+
+          <!-- Search Examples & Tags -->
+          <div class="search-tags">
+            <span class="search-tags-label"><i class="fa-solid fa-tags"></i> Popular Searches:</span>
+            <button type="button" class="search-tag-chip" data-query="C Programming">C Programming</button>
+            <button type="button" class="search-tag-chip" data-query="Java">Java</button>
+            <button type="button" class="search-tag-chip" data-query="Python">Python</button>
+            <button type="button" class="search-tag-chip" data-query="DSA">DSA</button>
+            <button type="button" class="search-tag-chip" data-query="HTML & CSS">HTML & CSS</button>
+          </div>
+
+          <!-- Live Matching Results Dropdown -->
+          <div id="hero-search-results" class="quick-search-results" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. Topics Covered ================= -->
+    <section class="section" id="topics">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-layer-group"></i> Curated Curriculum</span>
+          <h2 class="section-title">Explore Learning Topics</h2>
+          <p class="section-subtitle">
+            Master engineering concepts with categorized, step-by-step topic roadmaps designed for college coursework and tech placements.
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="topics-tabs">
+          <button type="button" class="tab-btn active" data-category="all">All Topics</button>
+          <button type="button" class="tab-btn" data-category="programming">Programming</button>
+          <button type="button" class="tab-btn" data-category="web">Web Development</button>
+          <button type="button" class="tab-btn" data-category="cs">Computer Science</button>
+          <button type="button" class="tab-btn" data-category="tools">Development Tools</button>
+        </div>
+
+        <!-- Topics Grid -->
+        <div class="topics-grid">
+          <!-- Programming: C -->
+          <div class="topic-card" data-category="programming">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#eef2ff; color:#4f46e5;">
+                <i class="fa-solid fa-c"></i>
+              </div>
+              <span class="topic-badge badge-beginner">Beginner</span>
+            </div>
+            <h3>C Programming</h3>
+            <p>Pointers, memory allocation, structures, and systems foundation for every engineer.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 25 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 18 Hours</span>
+            </div>
+            <a href="courses.html?filter=c" class="topic-btn" data-view-syllabus data-course-id="c-programming" data-title="C Programming" data-level="Beginner" data-lessons="25 Lessons" data-topics="Variables, Loops, Functions, Arrays, Pointers, Dynamic Memory">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Programming: C++ -->
+          <div class="topic-card" data-category="programming">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#e0f2fe; color:#0284c7;">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <span class="topic-badge badge-intermediate">Intermediate</span>
+            </div>
+            <h3>C++ Language</h3>
+            <p>Object-Oriented Programming, templates, STL containers, and competitive programming.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 30 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 24 Hours</span>
+            </div>
+            <a href="courses.html?filter=cpp" class="topic-btn" data-view-syllabus data-course-id="cpp-programming" data-title="C++ Language" data-level="Intermediate" data-lessons="30 Lessons" data-topics="OOP, Classes, Inheritance, Polymorphism, STL Containers, Templates">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Programming: Java -->
+          <div class="topic-card" data-category="programming">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#fff7ed; color:#ea580c;">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <span class="topic-badge badge-intermediate">Intermediate</span>
+            </div>
+            <h3>Java</h3>
+            <p>Class design, inheritance, polymorphism, Collections framework, and robust multithreading.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 35 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 28 Hours</span>
+            </div>
+            <a href="courses.html?filter=java" class="topic-btn" data-view-syllabus data-course-id="java-programming" data-title="Java Programming" data-level="Intermediate" data-lessons="35 Lessons" data-topics="OOP, Collections, Exceptions, Generics, Streams API">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Programming: Python -->
+          <div class="topic-card" data-category="programming">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#fefce8; color:#ca8a04;">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <span class="topic-badge badge-beginner">Beginner</span>
+            </div>
+            <h3>Python</h3>
+            <p>Scripting, built-in data structures, modules, file I/O, automation, and data foundations.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 28 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 20 Hours</span>
+            </div>
+            <a href="courses.html?filter=python" class="topic-btn" data-view-syllabus data-course-id="python-beginners" data-title="Python" data-level="Beginner" data-lessons="28 Lessons" data-topics="Functions, Lists, Dictionaries, Modules, File Handling, OOP">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Web Dev: HTML -->
+          <div class="topic-card" data-category="web">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#fff1f2; color:#e11d48;">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <span class="topic-badge badge-beginner">Beginner</span>
+            </div>
+            <h3>HTML5</h3>
+            <p>Semantic markup, accessible forms, audio/video embeds, and web structure best practices.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 15 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 10 Hours</span>
+            </div>
+            <a href="courses.html?filter=web" class="topic-btn" data-view-syllabus data-course-id="web-html" data-title="HTML5" data-level="Beginner" data-lessons="15 Lessons" data-topics="Semantic Tags, Forms, Audio/Video, Meta Tags, Accessibility">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Web Dev: CSS -->
+          <div class="topic-card" data-category="web">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#eff6ff; color:#2563eb;">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <span class="topic-badge badge-beginner">Beginner</span>
+            </div>
+            <h3>CSS3 & Modern Layouts</h3>
+            <p>Flexbox, Grid, CSS Variables, responsive mobile layouts, and keyframe animations.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 15 Hours</span>
+            </div>
+            <a href="courses.html?filter=web" class="topic-btn" data-view-syllabus data-course-id="web-css" data-title="CSS3 & Layouts" data-level="Beginner" data-lessons="20 Lessons" data-topics="Flexbox, Grid, Media Queries, Transitions, Animations, Variables">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Web Dev: JavaScript -->
+          <div class="topic-card" data-category="web">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#fef08a; color:#854d0e;">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <span class="topic-badge badge-intermediate">Intermediate</span>
+            </div>
+            <h3>JavaScript ES6+</h3>
+            <p>DOM manipulation, asynchronous code, Promises, Fetch API, Closures, and event loops.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 32 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 26 Hours</span>
+            </div>
+            <a href="courses.html?filter=web" class="topic-btn" data-view-syllabus data-course-id="web-js" data-title="JavaScript ES6+" data-level="Intermediate" data-lessons="32 Lessons" data-topics="DOM, ES6 Syntax, Promises, Async/Await, LocalStorage, Event Loop">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Web Dev: React -->
+          <div class="topic-card" data-category="web">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#ecfeff; color:#0891b2;">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <span class="topic-badge badge-intermediate">Intermediate</span>
+            </div>
+            <h3>React</h3>
+            <p>Functional components, React Hooks (useState, useEffect), state management, and SPAs.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 28 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 22 Hours</span>
+            </div>
+            <a href="courses.html?filter=web" class="topic-btn" data-view-syllabus data-course-id="web-react" data-title="React Framework" data-level="Intermediate" data-lessons="28 Lessons" data-topics="JSX, Components, Hooks, Props, Router, State Management">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Computer Science: DSA -->
+          <div class="topic-card" data-category="cs">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#fdf4ff; color:#a21caf;">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <span class="topic-badge badge-advanced">Advanced</span>
+            </div>
+            <h3>DSA (Data Structures)</h3>
+            <p>Arrays, Linked Lists, Stacks, Queues, Binary Trees, Graphs, Sorting, and Dynamic Programming.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 50 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 45 Hours</span>
+            </div>
+            <a href="courses.html?filter=dsa" class="topic-btn" data-view-syllabus data-course-id="dsa-mastery" data-title="DSA (Data Structures & Algorithms)" data-level="Advanced" data-lessons="50 Lessons" data-topics="Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, DP">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Computer Science: DBMS -->
+          <div class="topic-card" data-category="cs">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#f0fdf4; color:#15803d;">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <span class="topic-badge badge-intermediate">Intermediate</span>
+            </div>
+            <h3>DBMS & SQL</h3>
+            <p>Relational databases, ER diagrams, Normalization (1NF to BCNF), SQL queries, and ACID.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 26 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 20 Hours</span>
+            </div>
+            <a href="courses.html?filter=cs" class="topic-btn" data-view-syllabus data-course-id="cs-dbms" data-title="DBMS & SQL" data-level="Intermediate" data-lessons="26 Lessons" data-topics="Relational Model, SQL Queries, Joins, Normalization, Transactions">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Computer Science: Operating Systems -->
+          <div class="topic-card" data-category="cs">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#eef2ff; color:#4338ca;">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <span class="topic-badge badge-intermediate">Intermediate</span>
+            </div>
+            <h3>Operating Systems</h3>
+            <p>Processes, threads, CPU scheduling algorithms, synchronization, deadlocks, and virtual memory.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 24 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 18 Hours</span>
+            </div>
+            <a href="courses.html?filter=cs" class="topic-btn" data-view-syllabus data-course-id="cs-os" data-title="Operating Systems" data-level="Intermediate" data-lessons="24 Lessons" data-topics="Process Management, Deadlocks, CPU Scheduling, Virtual Memory, File Systems">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Computer Science: Computer Networks -->
+          <div class="topic-card" data-category="cs">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#f5f3ff; color:#6d28d9;">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <span class="topic-badge badge-intermediate">Intermediate</span>
+            </div>
+            <h3>Computer Networks</h3>
+            <p>OSI 7-Layer model, TCP/IP, IP addressing, routing protocols, DNS, HTTP/HTTPS, and network sockets.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 25 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 20 Hours</span>
+            </div>
+            <a href="courses.html?filter=cs" class="topic-btn" data-view-syllabus data-course-id="cs-cn" data-title="Computer Networks" data-level="Intermediate" data-lessons="25 Lessons" data-topics="OSI Model, TCP/IP, IP Subnetting, Routing Protocols, DNS & HTTP">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Tools: Git & GitHub -->
+          <div class="topic-card" data-category="tools">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#f1f5f9; color:#0f172a;">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <span class="topic-badge badge-beginner">Beginner</span>
+            </div>
+            <h3>Git & GitHub</h3>
+            <p>Branches, commits, merge conflicts, pull requests, and professional open-source collaboration.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 18 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 12 Hours</span>
+            </div>
+            <a href="courses.html?filter=tools" class="topic-btn" data-view-syllabus data-course-id="tools-git" data-title="Git & GitHub" data-level="Beginner" data-lessons="18 Lessons" data-topics="Version Control, Branching, Merging, Pull Requests, Git Rebase">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Tools: VS Code -->
+          <div class="topic-card" data-category="tools">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#e0f2fe; color:#0369a1;">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+              <span class="topic-badge badge-beginner">Beginner</span>
+            </div>
+            <h3>VS Code Setup</h3>
+            <p>Editor productivity, keybindings, linting, extensions, debugging tools, and integrated terminal.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 12 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 8 Hours</span>
+            </div>
+            <a href="courses.html?filter=tools" class="topic-btn" data-view-syllabus data-course-id="tools-vscode" data-title="VS Code Setup" data-level="Beginner" data-lessons="12 Lessons" data-topics="Shortcuts, Extensions, Debugging, Settings Sync, Integrated Terminal">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Tools: Linux -->
+          <div class="topic-card" data-category="tools">
+            <div class="topic-header">
+              <div class="topic-icon-wrap" style="background:#fffbeb; color:#b45309;">
+                <i class="fa-brands fa-linux"></i>
+              </div>
+              <span class="topic-badge badge-beginner">Beginner</span>
+            </div>
+            <h3>Linux Essentials</h3>
+            <p>Command line navigation, file permissions (chmod, chown), package managers, and shell scripts.</p>
+            <div class="topic-meta">
+              <span><i class="fa-solid fa-book-open"></i> 16 Lessons</span>
+              <span><i class="fa-solid fa-clock"></i> 14 Hours</span>
+            </div>
+            <a href="courses.html?filter=tools" class="topic-btn" data-view-syllabus data-course-id="tools-linux" data-title="Linux Essentials" data-level="Beginner" data-lessons="16 Lessons" data-topics="Bash Navigation, File Permissions, Package Management, Shell Scripting">
+              Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. Topics Table Section ================= -->
+    <section class="section section-alt" id="curriculum-table">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-table"></i> Academic Syllabus</span>
+          <h2 class="section-title">Core Semester Subjects</h2>
+          <p class="section-subtitle">
+            Reference table of foundational university subjects with lesson breakdowns and direct course access.
+          </p>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th style="width: 50px;">#</th>
+                  <th>Subject</th>
+                  <th>Topics Covered</th>
+                  <th>Lessons</th>
+                  <th>Level</th>
+                  <th style="text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1</strong></td>
+                  <td>
+                    <div class="table-subject-cell">
+                      <div class="subject-icon-pill" style="background:#eef2ff; color:#4f46e5;">
+                        <i class="fa-solid fa-c"></i>
+                      </div>
+                      <span>C Programming</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="topics-tags-wrap">
+                      <span class="topic-tag-pill">Variables</span>
+                      <span class="topic-tag-pill">Loops</span>
+                      <span class="topic-tag-pill">Functions</span>
+                      <span class="topic-tag-pill">Arrays</span>
+                      <span class="topic-tag-pill">Pointers</span>
+                    </div>
+                  </td>
+                  <td><span style="font-weight:600;">25 Lessons</span></td>
+                  <td><span class="topic-badge badge-beginner">Beginner</span></td>
+                  <td style="text-align: right;">
+                    <button type="button" class="btn btn-outline btn-sm" data-view-syllabus data-course-id="c-programming" data-title="C Programming" data-level="Beginner" data-lessons="25 Lessons" data-topics="Variables, Loops, Functions, Arrays, Pointers">
+                      View Course
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>2</strong></td>
+                  <td>
+                    <div class="table-subject-cell">
+                      <div class="subject-icon-pill" style="background:#e0f2fe; color:#0284c7;">
+                        <i class="fa-solid fa-laptop-code"></i>
+                      </div>
+                      <span>C++</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="topics-tags-wrap">
+                      <span class="topic-tag-pill">OOP</span>
+                      <span class="topic-tag-pill">Classes</span>
+                      <span class="topic-tag-pill">Inheritance</span>
+                      <span class="topic-tag-pill">Polymorphism</span>
+                    </div>
+                  </td>
+                  <td><span style="font-weight:600;">30 Lessons</span></td>
+                  <td><span class="topic-badge badge-intermediate">Intermediate</span></td>
+                  <td style="text-align: right;">
+                    <button type="button" class="btn btn-outline btn-sm" data-view-syllabus data-course-id="cpp-programming" data-title="C++ Language" data-level="Intermediate" data-lessons="30 Lessons" data-topics="OOP, Classes, Inheritance, Polymorphism">
+                      View Course
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>3</strong></td>
+                  <td>
+                    <div class="table-subject-cell">
+                      <div class="subject-icon-pill" style="background:#fff7ed; color:#ea580c;">
+                        <i class="fa-brands fa-java"></i>
+                      </div>
+                      <span>Java</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="topics-tags-wrap">
+                      <span class="topic-tag-pill">OOP</span>
+                      <span class="topic-tag-pill">Collections</span>
+                      <span class="topic-tag-pill">Exceptions</span>
+                    </div>
+                  </td>
+                  <td><span style="font-weight:600;">35 Lessons</span></td>
+                  <td><span class="topic-badge badge-intermediate">Intermediate</span></td>
+                  <td style="text-align: right;">
+                    <button type="button" class="btn btn-outline btn-sm" data-view-syllabus data-course-id="java-programming" data-title="Java Programming" data-level="Intermediate" data-lessons="35 Lessons" data-topics="OOP, Collections, Exceptions, Generics">
+                      View Course
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>4</strong></td>
+                  <td>
+                    <div class="table-subject-cell">
+                      <div class="subject-icon-pill" style="background:#fefce8; color:#ca8a04;">
+                        <i class="fa-brands fa-python"></i>
+                      </div>
+                      <span>Python</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="topics-tags-wrap">
+                      <span class="topic-tag-pill">Functions</span>
+                      <span class="topic-tag-pill">Lists</span>
+                      <span class="topic-tag-pill">Dictionaries</span>
+                      <span class="topic-tag-pill">Modules</span>
+                    </div>
+                  </td>
+                  <td><span style="font-weight:600;">28 Lessons</span></td>
+                  <td><span class="topic-badge badge-beginner">Beginner</span></td>
+                  <td style="text-align: right;">
+                    <button type="button" class="btn btn-outline btn-sm" data-view-syllabus data-course-id="python-beginners" data-title="Python Programming" data-level="Beginner" data-lessons="28 Lessons" data-topics="Functions, Lists, Dictionaries, Modules">
+                      View Course
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>5</strong></td>
+                  <td>
+                    <div class="table-subject-cell">
+                      <div class="subject-icon-pill" style="background:#ecfdf5; color:#059669;">
+                        <i class="fa-solid fa-code"></i>
+                      </div>
+                      <span>Web Development</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="topics-tags-wrap">
+                      <span class="topic-tag-pill">HTML</span>
+                      <span class="topic-tag-pill">CSS</span>
+                      <span class="topic-tag-pill">JavaScript</span>
+                    </div>
+                  </td>
+                  <td><span style="font-weight:600;">40 Lessons</span></td>
+                  <td><span class="topic-badge badge-beginner">Beginner</span></td>
+                  <td style="text-align: right;">
+                    <button type="button" class="btn btn-outline btn-sm" data-view-syllabus data-course-id="web-dev" data-title="Web Development" data-level="Beginner" data-lessons="40 Lessons" data-topics="HTML, CSS, JavaScript, Responsive Design">
+                      View Course
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>6</strong></td>
+                  <td>
+                    <div class="table-subject-cell">
+                      <div class="subject-icon-pill" style="background:#fdf4ff; color:#a21caf;">
+                        <i class="fa-solid fa-network-wired"></i>
+                      </div>
+                      <span>DSA</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="topics-tags-wrap">
+                      <span class="topic-tag-pill">Arrays</span>
+                      <span class="topic-tag-pill">Linked Lists</span>
+                      <span class="topic-tag-pill">Stacks</span>
+                      <span class="topic-tag-pill">Queues</span>
+                      <span class="topic-tag-pill">Sorting</span>
+                    </div>
+                  </td>
+                  <td><span style="font-weight:600;">50 Lessons</span></td>
+                  <td><span class="topic-badge badge-advanced">Advanced</span></td>
+                  <td style="text-align: right;">
+                    <button type="button" class="btn btn-outline btn-sm" data-view-syllabus data-course-id="dsa-mastery" data-title="Data Structures & Algorithms" data-level="Advanced" data-lessons="50 Lessons" data-topics="Arrays, Linked Lists, Stacks, Queues, Sorting">
+                      View Course
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. Featured Courses ================= -->
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-graduation-cap"></i> Most Popular</span>
+          <h2 class="section-title">Popular Courses</h2>
+          <p class="section-subtitle">
+            Comprehensive college-level courses taught by experienced educators with hands-on coding exercises.
+          </p>
+        </div>
+
+        <div class="courses-grid">
+          <!-- Course 1: Complete C Programming -->
+          <div class="course-card">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #4338ca 0%, #312e81 100%);">
+              <span class="course-difficulty-badge">Beginner</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-solid fa-c course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:var(--primary); text-transform:uppercase;">Programming</span>
+                <div class="course-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.9 (1,420)</span>
+                </div>
+              </div>
+              <h3>Complete C Programming</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Prof. R. K. Sharma</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 25 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 18 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header">
+                  <span>Student Completion</span>
+                  <span>100%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 100%;"></div>
+                </div>
+              </div>
+              <div class="course-footer">
+                <button type="button" class="btn btn-primary" style="width:100%;" data-course-enroll data-course-id="c-programming" data-course-title="Complete C Programming">
+                  Start Course
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2: Java Programming -->
+          <div class="course-card">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%);">
+              <span class="course-difficulty-badge">Intermediate</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-brands fa-java course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#ea580c; text-transform:uppercase;">Software Dev</span>
+                <div class="course-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.9 (2,850)</span>
+                </div>
+              </div>
+              <h3>Java Programming</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Dr. Priya Nair</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 35 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 28 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header">
+                  <span>Your Progress</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="course-footer">
+                <button type="button" class="btn btn-primary" style="width:100%;" data-course-enroll data-course-id="java-programming" data-course-title="Java Programming">
+                  Continue Course
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3: Python for Beginners -->
+          <div class="course-card">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
+              <span class="course-difficulty-badge">Beginner</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-brands fa-python course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#0284c7; text-transform:uppercase;">Data & Scripting</span>
+                <div class="course-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.8 (3,120)</span>
+                </div>
+              </div>
+              <h3>Python for Beginners</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Dr. Ananya Sen</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 28 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 20 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header">
+                  <span>Student Completion</span>
+                  <span>45%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 45%;"></div>
+                </div>
+              </div>
+              <div class="course-footer">
+                <button type="button" class="btn btn-primary" style="width:100%;" data-course-enroll data-course-id="python-beginners" data-course-title="Python for Beginners">
+                  Start Course
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4: Data Structures & Algorithms -->
+          <div class="course-card">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%);">
+              <span class="course-difficulty-badge">Advanced</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-solid fa-network-wired course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#7c3aed; text-transform:uppercase;">Placements</span>
+                <div class="course-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>5.0 (4,210)</span>
+                </div>
+              </div>
+              <h3>Data Structures & Algorithms</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Vikram Malhotra (FAANG Mentor)</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 50 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 45 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header">
+                  <span>Placement Roadmap</span>
+                  <span>44%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 44%;"></div>
+                </div>
+              </div>
+              <div class="course-footer">
+                <button type="button" class="btn btn-primary" style="width:100%;" data-course-enroll data-course-id="dsa-mastery" data-course-title="Data Structures & Algorithms">
+                  Start Course
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 5: Full Stack Web Development -->
+          <div class="course-card">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #059669 0%, #064e3b 100%);">
+              <span class="course-difficulty-badge">Beginner</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-solid fa-code course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#10b981; text-transform:uppercase;">Web Systems</span>
+                <div class="course-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.9 (1,890)</span>
+                </div>
+              </div>
+              <h3>Full Stack Web Development</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Karan Verma</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 40 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 32 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header">
+                  <span>Project Ready</span>
+                  <span>35%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 35%;"></div>
+                </div>
+              </div>
+              <div class="course-footer">
+                <button type="button" class="btn btn-primary" style="width:100%;" data-course-enroll data-course-id="web-dev" data-course-title="Full Stack Web Development">
+                  Start Course
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 6: Git & GitHub -->
+          <div class="course-card">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+              <span class="course-difficulty-badge">Beginner</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-brands fa-github course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Dev Tools</span>
+                <div class="course-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.9 (980)</span>
+                </div>
+              </div>
+              <h3>Git & GitHub</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Neha Kapoor</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 18 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 12 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header">
+                  <span>Student Completion</span>
+                  <span>60%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 60%;"></div>
+                </div>
+              </div>
+              <div class="course-footer">
+                <button type="button" class="btn btn-primary" style="width:100%;" data-course-enroll data-course-id="tools-git" data-course-title="Git & GitHub">
+                  Start Course
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. Coding Videos Section ================= -->
+    <section class="section section-alt" id="videos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-play"></i> Video Tutorials</span>
+          <h2 class="section-title">Learn Through Coding Videos</h2>
+          <p class="section-subtitle">
+            Curated, high-definition lecture playlists and masterclasses from leading technical instructors.
+          </p>
+        </div>
+
+        <div class="videos-grid">
+          <!-- Video 1: C -->
+          <div class="video-card" data-video-title="C Programming Full Course Tutorial" data-video-url="https://www.youtube.com/results?search_query=c+programming+full+course">
+            <div class="video-thumbnail">
+              <div class="video-thumb-bg" style="background: radial-gradient(circle, #4338ca 0%, #1e1b4b 100%);"></div>
+              <span class="video-lang-badge"><i class="fa-solid fa-c"></i> C</span>
+              <div class="play-button-overlay"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration-badge">4h 30m</span>
+            </div>
+            <div class="video-card-body">
+              <h3>C Programming Complete Course</h3>
+              <p>Master pointers, memory allocation, and fundamentals with real code examples.</p>
+              <div class="video-card-footer">
+                <span class="youtube-pill"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                <a href="https://www.youtube.com/results?search_query=c+programming+full+course" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Watch Video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 2: C++ -->
+          <div class="video-card" data-video-title="C++ Tutorial for Beginners (Full Course)" data-video-url="https://www.youtube.com/results?search_query=c%2B%2B+full+course">
+            <div class="video-thumbnail">
+              <div class="video-thumb-bg" style="background: radial-gradient(circle, #0284c7 0%, #082f49 100%);"></div>
+              <span class="video-lang-badge"><i class="fa-solid fa-laptop-code"></i> C++</span>
+              <div class="play-button-overlay"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration-badge">6h 15m</span>
+            </div>
+            <div class="video-card-body">
+              <h3>C++ OOP & STL Masterclass</h3>
+              <p>Object-Oriented Programming, classes, polymorphism, and standard templates.</p>
+              <div class="video-card-footer">
+                <span class="youtube-pill"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                <a href="https://www.youtube.com/results?search_query=c%2B%2B+full+course" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Watch Video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 3: Java -->
+          <div class="video-card" data-video-title="Java Programming Complete Course Video" data-video-url="https://www.youtube.com/results?search_query=java+full+course">
+            <div class="video-thumbnail">
+              <div class="video-thumb-bg" style="background: radial-gradient(circle, #ea580c 0%, #431407 100%);"></div>
+              <span class="video-lang-badge"><i class="fa-brands fa-java"></i> Java</span>
+              <div class="play-button-overlay"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration-badge">8h 45m</span>
+            </div>
+            <div class="video-card-body">
+              <h3>Java Full Course for Beginners</h3>
+              <p>From Java variables to advanced collections, multithreading, and OOP design.</p>
+              <div class="video-card-footer">
+                <span class="youtube-pill"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                <a href="https://www.youtube.com/results?search_query=java+full+course" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Watch Video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 4: Python -->
+          <div class="video-card" data-video-title="Python 12-Hour Masterclass" data-video-url="https://www.youtube.com/results?search_query=python+for+beginners+full+course">
+            <div class="video-thumbnail">
+              <div class="video-thumb-bg" style="background: radial-gradient(circle, #ca8a04 0%, #422006 100%);"></div>
+              <span class="video-lang-badge"><i class="fa-brands fa-python"></i> Python</span>
+              <div class="play-button-overlay"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration-badge">12h 00m</span>
+            </div>
+            <div class="video-card-body">
+              <h3>Python for Beginners to Pro</h3>
+              <p>Learn core syntax, lists, dictionaries, functions, and automation libraries.</p>
+              <div class="video-card-footer">
+                <span class="youtube-pill"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                <a href="https://www.youtube.com/results?search_query=python+for+beginners+full+course" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Watch Video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 5: HTML & CSS -->
+          <div class="video-card" data-video-title="HTML & CSS Crash Course" data-video-url="https://www.youtube.com/results?search_query=html+css+full+course">
+            <div class="video-thumbnail">
+              <div class="video-thumb-bg" style="background: radial-gradient(circle, #2563eb 0%, #172554 100%);"></div>
+              <span class="video-lang-badge"><i class="fa-brands fa-html5"></i> Web</span>
+              <div class="play-button-overlay"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration-badge">5h 20m</span>
+            </div>
+            <div class="video-card-body">
+              <h3>HTML & CSS Crash Course</h3>
+              <p>Build responsive web applications with semantic HTML5 and modern Flexbox/Grid.</p>
+              <div class="video-card-footer">
+                <span class="youtube-pill"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                <a href="https://www.youtube.com/results?search_query=html+css+full+course" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Watch Video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 6: JavaScript -->
+          <div class="video-card" data-video-title="JavaScript Tutorial from Zero to Hero" data-video-url="https://www.youtube.com/results?search_query=javascript+tutorial+for+beginners">
+            <div class="video-thumbnail">
+              <div class="video-thumb-bg" style="background: radial-gradient(circle, #854d0e 0%, #292524 100%);"></div>
+              <span class="video-lang-badge"><i class="fa-brands fa-js"></i> JS</span>
+              <div class="play-button-overlay"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration-badge">7h 10m</span>
+            </div>
+            <div class="video-card-body">
+              <h3>Modern JavaScript ES6+</h3>
+              <p>Async/await, promises, DOM manipulation, and interactive web application logic.</p>
+              <div class="video-card-footer">
+                <span class="youtube-pill"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                <a href="https://www.youtube.com/results?search_query=javascript+tutorial+for+beginners" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Watch Video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 7: DSA -->
+          <div class="video-card" data-video-title="DSA Placement Series" data-video-url="https://www.youtube.com/results?search_query=dsa+course+for+placement">
+            <div class="video-thumbnail">
+              <div class="video-thumb-bg" style="background: radial-gradient(circle, #7c3aed 0%, #2e1065 100%);"></div>
+              <span class="video-lang-badge"><i class="fa-solid fa-network-wired"></i> DSA</span>
+              <div class="play-button-overlay"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration-badge">18h 30m</span>
+            </div>
+            <div class="video-card-body">
+              <h3>DSA Placement Preparation</h3>
+              <p>Top algorithmic problems, time complexity, recursion, dynamic programming.</p>
+              <div class="video-card-footer">
+                <span class="youtube-pill"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                <a href="https://www.youtube.com/results?search_query=dsa+course+for+placement" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Watch Video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 8: Git & GitHub -->
+          <div class="video-card" data-video-title="Git & GitHub Step-by-Step" data-video-url="https://www.youtube.com/results?search_query=git+and+github+tutorial">
+            <div class="video-thumbnail">
+              <div class="video-thumb-bg" style="background: radial-gradient(circle, #334155 0%, #020617 100%);"></div>
+              <span class="video-lang-badge"><i class="fa-brands fa-github"></i> Git</span>
+              <div class="play-button-overlay"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration-badge">3h 40m</span>
+            </div>
+            <div class="video-card-body">
+              <h3>Git & GitHub for Developers</h3>
+              <p>Version control workflow, branching strategies, pull requests, and Git conflict resolution.</p>
+              <div class="video-card-footer">
+                <span class="youtube-pill"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                <a href="https://www.youtube.com/results?search_query=git+and+github+tutorial" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Watch Video</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. Learning Resources Section ================= -->
+    <section class="section" id="resources">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-folder-open"></i> Student Toolkit</span>
+          <h2 class="section-title">Learning Resources</h2>
+          <p class="section-subtitle">
+            Essential study materials, practice problem sets, and quick reference cheat sheets to boost your academic scores.
+          </p>
+        </div>
+
+        <div class="resources-grid">
+          <!-- 1. Notes -->
+          <div class="resource-card">
+            <div class="resource-icon-box" style="background:#eef2ff; color:#4f46e5;">
+              <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <h3>📄 Notes</h3>
+            <p>Programming notes and revision material crafted for college exams.</p>
+            <a href="resources.html#notes" class="btn btn-outline btn-sm" data-view-resource data-resource-title="📄 Programming Notes & Revision Guides" data-resource-desc="Includes comprehensive chapter summaries, handwritten formulas, and syntax diagrams for C, Java, Python, and DSA.">
+              View Resource
+            </a>
+          </div>
+
+          <!-- 2. Practice Questions -->
+          <div class="resource-card">
+            <div class="resource-icon-box" style="background:#ecfdf5; color:#10b981;">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <h3>📝 Practice Questions</h3>
+            <p>Topic-wise coding questions with step-by-step explanations.</p>
+            <a href="resources.html#practice" class="btn btn-outline btn-sm" data-view-resource data-resource-title="📝 Topic-Wise Practice Questions" data-resource-desc="Over 400+ curated conceptual and coding questions categorized from easy to hard, complete with edge case analysis.">
+              View Resource
+            </a>
+          </div>
+
+          <!-- 3. Coding Practice -->
+          <div class="resource-card">
+            <div class="resource-icon-box" style="background:#f0f9ff; color:#0284c7;">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>💻 Coding Practice</h3>
+            <p>Problems for beginners and intermediate students to build muscle memory.</p>
+            <a href="resources.html#coding" class="btn btn-outline btn-sm" data-view-resource data-resource-title="💻 Hands-on Coding Practice" data-resource-desc="Interactive problem statements, test cases, and algorithmic prompts to build your coding speed.">
+              View Resource
+            </a>
+          </div>
+
+          <!-- 4. Cheat Sheets -->
+          <div class="resource-card">
+            <div class="resource-icon-box" style="background:#fffbeb; color:#d97706;">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <h3>📚 Cheat Sheets</h3>
+            <p>Quick revision sheets for programming languages and CLI commands.</p>
+            <a href="resources.html#cheatsheets" class="btn btn-outline btn-sm" data-view-resource data-resource-title="📚 Programming Cheat Sheets" data-resource-desc="One-page quick references for C, Java, Python, SQL queries, Git commands, and Linux terminal utilities.">
+              View Resource
+            </a>
+          </div>
+
+          <!-- 5. Interview Preparation -->
+          <div class="resource-card">
+            <div class="resource-icon-box" style="background:#fdf2f8; color:#db2777;">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3>🎯 Interview Prep</h3>
+            <p>Technical interview questions and placement preparation resources.</p>
+            <a href="resources.html#interview" class="btn btn-outline btn-sm" data-view-resource data-resource-title="🎯 Technical Interview Preparation" data-resource-desc="Top 100 core CS questions on OS, DBMS, OOP, System Design fundamentals, and HR interview strategies.">
+              View Resource
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 16. Student Motivation Section ================= -->
+    <section class="motivation-section" id="about">
+      <div class="motivation-pattern"></div>
+      <div class="container motivation-content">
+        <div class="motivation-badge">
+          <i class="fa-solid fa-lightbulb"></i>
+          <span>Student Mindset</span>
+        </div>
+
+        <h2 class="motivation-title">
+          "Small progress every day leads to big results."
+        </h2>
+
+        <div class="motivation-quote-box">
+          <div class="motivation-steps">
+            <div class="step-card">
+              <i class="fa-solid fa-book-open-reader"></i>
+              <span>Learn something new.</span>
+            </div>
+            <div class="step-card">
+              <i class="fa-solid fa-code"></i>
+              <span>Practice what you learn.</span>
+            </div>
+            <div class="step-card">
+              <i class="fa-solid fa-rocket"></i>
+              <span>Build something real.</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="signup.html" class="btn btn-secondary btn-lg" style="color:var(--primary); font-weight:800;">
+          Start Learning Today <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= 17. Testimonials Section ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-comments"></i> Student Feedback</span>
+          <h2 class="section-title">Loved by College Students</h2>
+          <p class="section-subtitle">
+            See how StudentHub helps computer science and IT learners stay ahead in their academic journey.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "StudentHub helped me organize my programming preparation. The structured roadmap made C and DSA feel straightforward instead of overwhelming."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CS</div>
+              <div class="author-info">
+                <h4>Computer Science Student</h4>
+                <p>3rd Year B.Tech • Verified Learner</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The DSA roadmap and curated video lectures got me ready for college placements. I cracked my dream campus interview with confidence!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #0ea5e9, #10b981);">AK</div>
+              <div class="author-info">
+                <h4>Aman Kumar</h4>
+                <p>Final Year B.Tech Student</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Cheat sheets and quick revision notes saved me right before my university semester exams. Clean UI, zero ads, and pure learning."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">RS</div>
+              <div class="author-info">
+                <h4>Rohan Sharma</h4>
+                <p>BCA 2nd Year Student</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The dark mode and progress tracker kept my study streak alive for 30 consecutive days. It feels like a real modern SaaS tool."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">SP</div>
+              <div class="author-info">
+                <h4>Sneha Patel</h4>
+                <p>MCA 1st Year Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 18. FAQ Section ================= -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-circle-question"></i> Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Find quick answers to common questions about courses, accounts, mobile access, and resources.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- Question 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>1. Is StudentHub free?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Yes! StudentHub is completely free for college students. All video lessons, cheat sheets, curated notes, and practice problem sets are freely accessible to help students excel academically.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>2. Which programming languages are available?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                StudentHub covers the core languages taught in university curriculums and used in software engineering: C, C++, Java, Python, and JavaScript, along with HTML5, CSS3, and modern frameworks like React.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>3. Can beginners use the platform?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Absolutely. Every topic begins with foundational lessons, basic syntax diagrams, and interactive step-by-step guides before transitioning to intermediate and advanced concepts.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>4. Can I track my learning progress?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Yes! Your learning hours, completed lessons, course percentage, and study streaks are saved locally in your browser so you can pick up exactly where you left off.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>5. Are the coding videos free?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Yes, all coding videos link directly to verified, high-quality, free YouTube masterclasses and full tutorial playlists curated by technical educators.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>6. Can I access the website on mobile?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Yes! StudentHub is fully responsive and optimized for smartphones, tablets, laptops, and wide desktop screens with touch-friendly navigation.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 19. Footer ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="brand-text">Student<span style="color:#818cf8;">Hub</span></div>
+          </a>
+          <p class="footer-tagline">"Learn. Practice. Build. Grow."</p>
+          <p style="font-size:0.875rem; color:#94a3b8; margin-bottom:1.25rem;">
+            Your unified college companion for computer science, software engineering, and technical placement prep.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Platform column -->
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="dashboard.html">Student Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Support column -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="resources.html#notes">Notes & Cheats</a></li>
+            <li><a href="resources.html#interview">Placement Prep</a></li>
+            <li><a href="mailto:support@studenthub.edu">Contact Helpdesk</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-col footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for weekly problem sets, study guides, and campus placement updates.</p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" placeholder="student@college.edu" class="newsletter-input" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="footer-bottom">
+        <p>© 2026 StudentHub. All rights reserved.</p>
+        <p>Built with ❤️ for college students worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= 20. Extra Modals & Interactive Overlays ================= -->
+
+  <!-- Global Search Modal -->
+  <div class="modal-overlay" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="modal-search-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-search-title"><i class="fa-solid fa-magnifying-glass" style="color:var(--primary); margin-right:0.5rem;"></i> Search StudentHub</h3>
+        <button type="button" class="modal-close-btn" id="search-modal-close" aria-label="Close search modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="padding-top:1rem;">
+        <div class="search-box-large" style="margin-bottom:1rem;">
+          <i class="fa-solid fa-magnifying-glass search-icon-left"></i>
+          <input type="text" id="modal-search-input" class="search-input-field" placeholder="Type language, course, video, or note...">
+        </div>
+        <div id="modal-search-results" style="max-height:360px; overflow-y:auto;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course Syllabus Modal -->
+  <div class="modal-overlay" id="course-details-modal" role="dialog" aria-modal="true" aria-labelledby="modal-course-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-course-title">Course Syllabus</h3>
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close syllabus modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-course-meta" style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1rem;"></div>
+        <h4 style="font-size:1rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">Topics Covered:</h4>
+        <div id="modal-course-topics" style="background:var(--bg-body); border-radius:var(--radius-md); padding:1rem; border:1px solid var(--border-color);"></div>
+        <div style="margin-top:1.5rem; display:flex; justify-content:flex-end; gap:0.75rem;">
+          <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
+          <button type="button" class="btn btn-primary btn-sm" id="modal-course-enroll" data-course-enroll>Start Course Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Preview Modal -->
+  <div class="modal-overlay" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-video-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-video-title">Video Masterclass</h3>
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close video modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align:center;">
+        <div style="padding:2.5rem 1.5rem; background:var(--bg-body); border-radius:var(--radius-lg); border:1px solid var(--border-color); margin-bottom:1.5rem;">
+          <i class="fa-brands fa-youtube" style="font-size:3.5rem; color:#ef4444; margin-bottom:1rem;"></i>
+          <h4 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Ready to watch on YouTube?</h4>
+          <p style="color:var(--text-secondary); font-size:0.9rem;">
+            Click below to open this full curated video lecture in high definition on YouTube.
+          </p>
+        </div>
+        <div style="display:flex; justify-content:center; gap:1rem;">
+          <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Dismiss</button>
+          <a href="#" target="_blank" rel="noopener" id="modal-video-external" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resource Viewer Modal -->
+  <div class="modal-overlay" id="resource-view-modal" role="dialog" aria-modal="true" aria-labelledby="modal-resource-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-resource-title">Resource Details</h3>
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close resource modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-resource-desc" style="color:var(--text-secondary); line-height:1.6; margin-bottom:1.5rem;"></p>
+        <div style="padding:1rem; background:var(--bg-body); border-radius:var(--radius-md); border:1px solid var(--border-color); margin-bottom:1.5rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem; color:var(--accent-green); font-weight:700; margin-bottom:0.25rem;">
+            <i class="fa-solid fa-circle-check"></i> Free Downloadable Material
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Format: Verified PDF / Markdown / Code Notebooks</p>
+        </div>
+        <div style="display:flex; justify-content:flex-end; gap:0.75rem;">
+          <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
+          <a href="resources.html" class="btn btn-primary btn-sm">Open in Resources Hub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Application Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

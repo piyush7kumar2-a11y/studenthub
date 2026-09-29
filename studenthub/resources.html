@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Resources | StudentHub - College Toolkit</title>
+  <meta name="description" content="Study notes, coding practice problems, language cheat sheets, and technical interview preparation resources for college students.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body class="page-resources">
+
+  <!-- ================= Navigation Bar ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="StudentHub Home">
+        <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">Student<span>Hub</span></div>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#topics" class="nav-link">Topics</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="index.html#videos" class="nav-link">Videos</a>
+        <a href="resources.html" class="nav-link active">Resources</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="signup.html" class="nav-link">Sign Up</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="search-trigger-btn" aria-label="Search resources">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="nav-auth-actions">
+          <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+        </div>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Resource Hero Header -->
+    <section class="section" style="padding-bottom: 2.5rem; background: var(--grad-hero);">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-badge"><i class="fa-solid fa-folder-open"></i> Student Study Vault</span>
+          <h1 class="section-title">Academic Learning Resources</h1>
+          <p class="section-subtitle">
+            Download concise semester notes, practice placement questions with answers, and revise syntax with language cheat sheets.
+          </p>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <div class="topics-tabs">
+          <a href="#notes" class="tab-btn active"><i class="fa-solid fa-file-lines"></i> 📄 Notes</a>
+          <a href="#practice" class="tab-btn"><i class="fa-solid fa-pen-to-square"></i> 📝 Practice Questions</a>
+          <a href="#coding" class="tab-btn"><i class="fa-solid fa-laptop-code"></i> 💻 Coding Practice</a>
+          <a href="#cheatsheets" class="tab-btn"><i class="fa-solid fa-book-bookmark"></i> 📚 Cheat Sheets</a>
+          <a href="#interview" class="tab-btn"><i class="fa-solid fa-bullseye"></i> 🎯 Interview Prep</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Notes Section -->
+    <section class="section" id="notes">
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem;">
+          <div>
+            <h2 style="font-size:1.85rem; font-weight:800; color:var(--text-primary);"><i class="fa-solid fa-file-lines" style="color:var(--primary); margin-right:0.5rem;"></i> 📄 Programming Notes & Revision</h2>
+            <p style="color:var(--text-secondary); margin-top:0.25rem;">Exam-focused revision notes with diagrams, pointers, and code snippets.</p>
+          </div>
+        </div>
+
+        <div class="resources-grid">
+          <div class="resource-card" style="align-items:flex-start; text-align:left;">
+            <div class="resource-icon-box" style="background:#eef2ff; color:#4f46e5;"><i class="fa-solid fa-c"></i></div>
+            <h3>C Programming Notes</h3>
+            <p>Pointers, dynamic memory allocation (malloc/calloc), struct packing, and file I/O operations.</p>
+            <div style="margin-top:auto; width:100%; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-file-pdf"></i> 48 Pages PDF</span>
+              <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Downloading C Programming Complete Notes PDF...', 'success')">
+                <i class="fa-solid fa-download"></i> View & Download
+              </button>
+            </div>
+          </div>
+
+          <div class="resource-card" style="align-items:flex-start; text-align:left;">
+            <div class="resource-icon-box" style="background:#fff7ed; color:#ea580c;"><i class="fa-brands fa-java"></i></div>
+            <h3>Java Core Notes</h3>
+            <p>OOP principles, JVM internal architecture, Collections framework hierarchy, and Exception classes.</p>
+            <div style="margin-top:auto; width:100%; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-file-pdf"></i> 64 Pages PDF</span>
+              <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Downloading Java Master Notes PDF...', 'success')">
+                <i class="fa-solid fa-download"></i> View & Download
+              </button>
+            </div>
+          </div>
+
+          <div class="resource-card" style="align-items:flex-start; text-align:left;">
+            <div class="resource-icon-box" style="background:#fefce8; color:#ca8a04;"><i class="fa-brands fa-python"></i></div>
+            <h3>Python Quick Revision</h3>
+            <p>List comprehensions, generators, decorators, standard library modules, and OOP syntax in Python.</p>
+            <div style="margin-top:auto; width:100%; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-file-pdf"></i> 35 Pages PDF</span>
+              <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Downloading Python Quick Notes PDF...', 'success')">
+                <i class="fa-solid fa-download"></i> View & Download
+              </button>
+            </div>
+          </div>
+
+          <div class="resource-card" style="align-items:flex-start; text-align:left;">
+            <div class="resource-icon-box" style="background:#fdf4ff; color:#a21caf;"><i class="fa-solid fa-network-wired"></i></div>
+            <h3>DSA Handwritten Notes</h3>
+            <p>Time & space complexity asymptotic analysis, recursion trees, tree traversals, and dynamic programming tables.</p>
+            <div style="margin-top:auto; width:100%; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-file-pdf"></i> 82 Pages PDF</span>
+              <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Downloading DSA Placement Formula Book...', 'success')">
+                <i class="fa-solid fa-download"></i> View & Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Practice Questions Section with Solution Reveals -->
+    <section class="section section-alt" id="practice">
+      <div class="container">
+        <div style="margin-bottom: 2rem;">
+          <h2 style="font-size:1.85rem; font-weight:800; color:var(--text-primary);"><i class="fa-solid fa-pen-to-square" style="color:var(--accent-green); margin-right:0.5rem;"></i> 📝 Practice Questions</h2>
+          <p style="color:var(--text-secondary); margin-top:0.25rem;">Topic-wise questions with interactive solution toggles for self-testing.</p>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+          <!-- Q1 -->
+          <div class="table-card" style="padding:1.5rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+              <span class="topic-badge badge-beginner">C & Pointers</span>
+              <span style="font-size:0.8rem; color:var(--text-muted);">Question #1</span>
+            </div>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.75rem;">What is the output of the following C pointer arithmetic snippet?</h3>
+            <pre style="background:var(--bg-body); padding:1rem; border-radius:var(--radius-md); font-family:var(--font-mono); font-size:0.875rem; border:1px solid var(--border-color); margin-bottom:1rem;"><code>int arr[] = {10, 20, 30, 40};
+int *p = arr;
+printf("%d", *(p + 2));</code></pre>
+            <details style="cursor:pointer;">
+              <summary style="font-weight:600; color:var(--primary);"><i class="fa-solid fa-eye"></i> Show Answer & Explanation</summary>
+              <div style="margin-top:0.75rem; padding:1rem; background:var(--primary-subtle); border-radius:var(--radius-md); font-size:0.9rem; line-height:1.6;">
+                <strong>Output: 30</strong><br>
+                Explanation: <code>p</code> initially points to <code>arr[0]</code> (value 10). <code>*(p + 2)</code> offsets by 2 integer memory widths, accessing <code>arr[2]</code> which is 30.
+              </div>
+            </details>
+          </div>
+
+          <!-- Q2 -->
+          <div class="table-card" style="padding:1.5rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+              <span class="topic-badge badge-intermediate">Java Collections</span>
+              <span style="font-size:0.8rem; color:var(--text-muted);">Question #2</span>
+            </div>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.75rem;">What is the primary difference between HashMap and Hashtable in Java?</h3>
+            <details style="cursor:pointer;">
+              <summary style="font-weight:600; color:var(--primary);"><i class="fa-solid fa-eye"></i> Show Answer & Explanation</summary>
+              <div style="margin-top:0.75rem; padding:1rem; background:var(--primary-subtle); border-radius:var(--radius-md); font-size:0.9rem; line-height:1.6;">
+                <strong>Key Differences:</strong><br>
+                1. <strong>Synchronization:</strong> <code>HashMap</code> is non-synchronized (faster, not thread-safe), whereas <code>Hashtable</code> is synchronized.<br>
+                2. <strong>Null Values:</strong> <code>HashMap</code> allows one null key and multiple null values, whereas <code>Hashtable</code> does not permit any null keys or values.
+              </div>
+            </details>
+          </div>
+
+          <!-- Q3 -->
+          <div class="table-card" style="padding:1.5rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+              <span class="topic-badge badge-advanced">DSA & Algorithms</span>
+              <span style="font-size:0.8rem; color:var(--text-muted);">Question #3</span>
+            </div>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.75rem;">How do you detect a cycle in a Singly Linked List in O(N) time and O(1) space?</h3>
+            <details style="cursor:pointer;">
+              <summary style="font-weight:600; color:var(--primary);"><i class="fa-solid fa-eye"></i> Show Answer & Explanation</summary>
+              <div style="margin-top:0.75rem; padding:1rem; background:var(--primary-subtle); border-radius:var(--radius-md); font-size:0.9rem; line-height:1.6;">
+                <strong>Floyd's Cycle-Finding Algorithm (Tortoise and Hare):</strong><br>
+                Initialize two pointers, <code>slow</code> and <code>fast</code>, at the head. In each iteration, advance <code>slow</code> by 1 step and <code>fast</code> by 2 steps. If <code>fast</code> and <code>slow</code> ever meet, a cycle exists. If <code>fast</code> reaches <code>null</code>, there is no cycle.
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Coding Practice Section -->
+    <section class="section" id="coding">
+      <div class="container">
+        <div style="margin-bottom: 2rem;">
+          <h2 style="font-size:1.85rem; font-weight:800; color:var(--text-primary);"><i class="fa-solid fa-laptop-code" style="color:var(--secondary); margin-right:0.5rem;"></i> 💻 Coding Practice Problems</h2>
+          <p style="color:var(--text-secondary); margin-top:0.25rem;">Hand-picked programming challenges for college placement tests and lab exams.</p>
+        </div>
+
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="course-card-content">
+              <span class="topic-badge badge-beginner" style="width:fit-content; margin-bottom:0.75rem;">Easy</span>
+              <h3>Two Sum Problem</h3>
+              <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1rem;">Given an array of integers and a target sum, return indices of the two numbers such that they add up to the target.</p>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">Expected: O(N) Time using Hash Map</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Problem loaded into workspace simulator! ⚡', 'info')">Solve Problem →</button>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-card-content">
+              <span class="topic-badge badge-intermediate" style="width:fit-content; margin-bottom:0.75rem;">Medium</span>
+              <h3>Valid Parentheses String</h3>
+              <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1rem;">Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.</p>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">Expected: O(N) Time using Stack</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Problem loaded into workspace simulator! ⚡', 'info')">Solve Problem →</button>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-card-content">
+              <span class="topic-badge badge-advanced" style="width:fit-content; margin-bottom:0.75rem;">Hard</span>
+              <h3>Trapping Rain Water</h3>
+              <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1rem;">Given n non-negative integers representing an elevation map where width of each bar is 1, compute how much water it can trap.</p>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">Expected: O(N) Time & O(1) Space using Two Pointers</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Problem loaded into workspace simulator! ⚡', 'info')">Solve Problem →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Cheat Sheets Section -->
+    <section class="section section-alt" id="cheatsheets">
+      <div class="container">
+        <div style="margin-bottom: 2rem;">
+          <h2 style="font-size:1.85rem; font-weight:800; color:var(--text-primary);"><i class="fa-solid fa-book-bookmark" style="color:#d97706; margin-right:0.5rem;"></i> 📚 Programming Cheat Sheets</h2>
+          <p style="color:var(--text-secondary); margin-top:0.25rem;">One-page printable syntax sheets for rapid recall during exams and project sprints.</p>
+        </div>
+
+        <div class="resources-grid">
+          <div class="resource-card">
+            <div class="resource-icon-box" style="background:#fffbeb; color:#b45309;"><i class="fa-brands fa-git-alt"></i></div>
+            <h3>Git Commands Cheat Sheet</h3>
+            <p>git rebase, cherry-pick, reset, stash, merge strategies, and remote tracking.</p>
+            <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Opening Git Commands Quick Sheet...', 'success')">View Cheat Sheet</button>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon-box" style="background:#f0fdf4; color:#15803d;"><i class="fa-solid fa-terminal"></i></div>
+            <h3>Linux Bash Commands</h3>
+            <p>grep, awk, sed, chmod permissions, piping, process management (ps, kill).</p>
+            <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Opening Linux CLI Cheat Sheet...', 'success')">View Cheat Sheet</button>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon-box" style="background:#eff6ff; color:#1d4ed8;"><i class="fa-solid fa-database"></i></div>
+            <h3>SQL Query Syntax Sheet</h3>
+            <p>GROUP BY, HAVING, INNER/OUTER JOINs, window functions (ROW_NUMBER), and indexes.</p>
+            <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Opening SQL Syntax Quick Sheet...', 'success')">View Cheat Sheet</button>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon-box" style="background:#fefce8; color:#ca8a04;"><i class="fa-brands fa-python"></i></div>
+            <h3>Python 3 Standard Sheet</h3>
+            <p>Built-in methods for dictionaries, sets, string formatting, slicing, and regex.</p>
+            <button type="button" class="btn btn-outline btn-sm" onclick="window.StudentHub.showToast('Opening Python 3 Quick Sheet...', 'success')">View Cheat Sheet</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Interview Preparation Section -->
+    <section class="section" id="interview">
+      <div class="container">
+        <div style="margin-bottom: 2rem;">
+          <h2 style="font-size:1.85rem; font-weight:800; color:var(--text-primary);"><i class="fa-solid fa-bullseye" style="color:#db2777; margin-right:0.5rem;"></i> 🎯 Technical Interview Preparation</h2>
+          <p style="color:var(--text-secondary); margin-top:0.25rem;">Core CS fundamentals frequently tested in university campus placement drives.</p>
+        </div>
+
+        <div class="dashboard-layout-2col">
+          <div class="dash-panel">
+            <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:1rem; color:var(--text-primary);">Top 50 Campus Technical Questions</h3>
+            <ul style="display:flex; flex-direction:column; gap:0.75rem; color:var(--text-secondary); font-size:0.95rem;">
+              <li style="padding:0.75rem; background:var(--bg-body); border-radius:var(--radius-md); border:1px solid var(--border-color);">
+                <strong>1. OS:</strong> What is virtual memory and how does page replacement work (LRU vs FIFO)?
+              </li>
+              <li style="padding:0.75rem; background:var(--bg-body); border-radius:var(--radius-md); border:1px solid var(--border-color);">
+                <strong>2. DBMS:</strong> Explain ACID properties with a bank transaction example.
+              </li>
+              <li style="padding:0.75rem; background:var(--bg-body); border-radius:var(--radius-md); border:1px solid var(--border-color);">
+                <strong>3. CN:</strong> What happens behind the scenes when you enter a URL in your browser?
+              </li>
+              <li style="padding:0.75rem; background:var(--bg-body); border-radius:var(--radius-md); border:1px solid var(--border-color);">
+                <strong>4. OOP:</strong> How does dynamic method dispatch implement runtime polymorphism?
+              </li>
+            </ul>
+          </div>
+
+          <div class="dash-panel" style="background:var(--grad-primary); color:#ffffff;">
+            <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:0.75rem;">Placement Master Pack</h3>
+            <p style="color:#e0e7ff; font-size:0.925rem; line-height:1.6; margin-bottom:1.5rem;">
+              Download our complete interview bundle: 100+ solved algorithmic problems, System Design basics, and HR interview etiquette.
+            </p>
+            <button type="button" class="btn btn-secondary btn-lg" style="width:100%; color:var(--primary); font-weight:800;" onclick="window.StudentHub.showToast('Preparing Placement Master Pack download...', 'success')">
+              <i class="fa-solid fa-file-zipper"></i> Download Placement Pack
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="brand-text">Student<span style="color:#818cf8;">Hub</span></div>
+          </a>
+          <p class="footer-tagline">"Learn. Practice. Build. Grow."</p>
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-icon-btn"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="index.html#topics">Topics</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="mailto:support@studenthub.edu">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for weekly problem sets and study guides.</p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" placeholder="student@college.edu" class="newsletter-input" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 StudentHub. All rights reserved.</p>
+        <p>Built with ❤️ for college students worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-magnifying-glass" style="color:var(--primary); margin-right:0.5rem;"></i> Search StudentHub</h3>
+        <button type="button" class="modal-close-btn" id="search-modal-close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" style="padding-top:1rem;">
+        <div class="search-box-large" style="margin-bottom:1rem;">
+          <i class="fa-solid fa-magnifying-glass search-icon-left"></i>
+          <input type="text" id="modal-search-input" class="search-input-field" placeholder="Type language, course, video, or note...">
+        </div>
+        <div id="modal-search-results" style="max-height:360px; overflow-y:auto;"></div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="back-to-top" id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

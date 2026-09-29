@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | StudentHub - College Learning Platform</title>
+  <meta name="description" content="Sign in to your StudentHub account to continue learning programming, DSA, and technical engineering skills.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body class="auth-page">
+
+  <!-- Floating Theme Switcher on Auth Pages -->
+  <div style="position: absolute; top: 1.5rem; right: 1.5rem; z-index: 10;">
+    <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </div>
+
+  <div class="auth-card">
+    <div class="auth-header">
+      <a href="index.html" class="brand-logo" aria-label="Back to home">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">Student<span>Hub</span></div>
+      </a>
+      <h1>Welcome Back</h1>
+      <p>Log in to access your enrolled courses, study notes, and active streak.</p>
+    </div>
+
+    <!-- Quick 1-Click Demo Login Box -->
+    <div class="demo-account-hint">
+      <div>
+        <strong><i class="fa-solid fa-bolt"></i> Quick Demo Access:</strong>
+        <p style="margin: 0; font-size: 0.75rem; color: var(--text-secondary);">Pre-configured student account</p>
+      </div>
+      <button type="button" id="demo-login-btn" class="btn btn-primary btn-sm">
+        1-Click Demo Login
+      </button>
+    </div>
+
+    <form id="login-form" class="auth-form" style="margin-top: 1.25rem;" novalidate>
+      <!-- Email Address -->
+      <div class="form-group">
+        <label for="email">Student / College Email</label>
+        <div class="input-with-icon">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" id="email" class="form-input" placeholder="student@studenthub.edu" required>
+        </div>
+        <div class="field-error-msg" id="email-error"></div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <label for="password">Password</label>
+          <a href="#" id="forgot-password-link" style="font-size: 0.8125rem; color: var(--primary); font-weight: 600;">
+            Forgot Password?
+          </a>
+        </div>
+        <div class="input-with-icon">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+        </div>
+        <div class="field-error-msg" id="password-error"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+        <i class="fa-solid fa-arrow-right-to-bracket"></i> Login to StudentHub
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      Don't have an account? <a href="signup.html">Sign Up here</a>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // Forgot Password Handler
+    document.getElementById('forgot-password-link').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.StudentHub.showToast('For demo accounts, use password: password123 or click "1-Click Demo Login".', 'info', 6000);
+    });
+  </script>
+</body>
+</html>

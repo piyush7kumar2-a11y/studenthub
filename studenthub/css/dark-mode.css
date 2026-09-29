@@ -1,0 +1,174 @@
+/* ==========================================================================
+   StudentHub - Dark Mode Stylesheet
+   ========================================================================== */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Overridden Theme Tokens */
+  --bg-body: #090d16;
+  --bg-surface: #0f172a;
+  --bg-surface-elevated: #1e293b;
+  --bg-alt: #161f30;
+  --border-color: #273549;
+  --border-light: #1e293b;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-inverse: #090d16;
+
+  /* Elevated Glow & Shadows for Dark Mode */
+  --grad-hero: linear-gradient(180deg, #090d16 0%, #111827 50%, #090d16 100%);
+  --grad-card: linear-gradient(145deg, #0f172a 0%, #161f30 100%);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+
+  --primary-subtle: rgba(79, 70, 229, 0.15);
+  --secondary-subtle: rgba(14, 165, 233, 0.15);
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom-color: #273549;
+}
+
+[data-theme="dark"] .navbar.scrolled {
+  background: rgba(15, 23, 42, 0.96);
+}
+
+[data-theme="dark"] .hero-badge {
+  background: #1e293b;
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+}
+
+[data-theme="dark"] .floating-badge {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .search-box-large {
+  background: #111827;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .search-box-large:focus-within {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .search-tag-chip {
+  background: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .search-tag-chip:hover {
+  background: rgba(79, 70, 229, 0.25);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .tab-btn {
+  background: #161f30;
+  border-color: #273549;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .tab-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .custom-table th {
+  background: #161f30;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .custom-table tbody tr:hover {
+  background: rgba(79, 70, 229, 0.12);
+}
+
+[data-theme="dark"] .topic-tag-pill {
+  background: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .badge-beginner {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+}
+
+[data-theme="dark"] .badge-intermediate {
+  background: rgba(59, 130, 246, 0.18);
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .badge-advanced {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .course-difficulty-badge {
+  background: rgba(15, 23, 42, 0.9);
+  color: #ffffff;
+  border: 1px solid #334155;
+}
+
+[data-theme="dark"] .instructor-avatar {
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .video-lang-badge {
+  background: rgba(15, 23, 42, 0.9);
+  color: #ffffff;
+  border: 1px solid #334155;
+}
+
+[data-theme="dark"] .auth-card {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .form-input {
+  background: #161f30;
+  border-color: #273549;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .form-input:focus {
+  background: #1e293b;
+}
+
+[data-theme="dark"] .demo-account-hint {
+  background: rgba(79, 70, 229, 0.15);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+[data-theme="dark"] .modal-card {
+  background: #0f172a;
+  border-color: #273549;
+}
+
+[data-theme="dark"] .quick-search-results {
+  background: #0f172a;
+  border-color: #273549;
+}
+
+[data-theme="dark"] .toast {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .enrolled-course-item {
+  background: #161f30;
+  border-color: #273549;
+}
+
+[data-theme="dark"] .lesson-check-item {
+  background: #161f30;
+  border-color: #273549;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | StudentHub - College Learning Platform</title>
+  <meta name="description" content="Create your StudentHub account to track coding progress, save study notes, and master engineering concepts.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body class="auth-page">
+
+  <!-- Floating Theme Switcher on Auth Pages -->
+  <div style="position: absolute; top: 1.5rem; right: 1.5rem; z-index: 10;">
+    <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </div>
+
+  <div class="auth-card">
+    <div class="auth-header">
+      <a href="index.html" class="brand-logo" aria-label="Back to home">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">Student<span>Hub</span></div>
+      </a>
+      <h1>Create Student Account</h1>
+      <p>Join over 10,000+ college engineering students accelerating their technical skills.</p>
+    </div>
+
+    <form id="signup-form" class="auth-form" novalidate>
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullName">Full Name *</label>
+        <div class="input-with-icon">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" id="fullName" class="form-input" placeholder="e.g. Aarav Sharma" required>
+        </div>
+        <div class="field-error-msg" id="fullName-error"></div>
+      </div>
+
+      <!-- Email Address -->
+      <div class="form-group">
+        <label for="email">College / Personal Email *</label>
+        <div class="input-with-icon">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" id="email" class="form-input" placeholder="student@college.edu" required>
+        </div>
+        <div class="field-error-msg" id="email-error"></div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <div class="input-with-icon">
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" id="phone" class="form-input" placeholder="+91 98765 43210" required>
+        </div>
+        <div class="field-error-msg" id="phone-error"></div>
+      </div>
+
+      <!-- Course & Academic Year Row -->
+      <div class="form-row-2col">
+        <!-- Degree Course -->
+        <div class="form-group">
+          <label for="course">Degree / Course *</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <select id="course" class="form-input" style="padding-left: 2.6rem;" required>
+              <option value="" disabled selected>Select Course</option>
+              <option value="B.Tech">B.Tech</option>
+              <option value="BCA">BCA</option>
+              <option value="B.Sc">B.Sc Computer Science / IT</option>
+              <option value="MCA">MCA</option>
+              <option value="Other">Other Degree</option>
+            </select>
+          </div>
+          <div class="field-error-msg" id="course-error"></div>
+        </div>
+
+        <!-- Academic Year -->
+        <div class="form-group">
+          <label for="year">Academic Year *</label>
+          <div class="input-with-icon">
+            <i class="fa-regular fa-calendar-days"></i>
+            <select id="year" class="form-input" style="padding-left: 2.6rem;" required>
+              <option value="" disabled selected>Select Year</option>
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+            </select>
+          </div>
+          <div class="field-error-msg" id="year-error"></div>
+        </div>
+      </div>
+
+      <!-- Password & Confirm Password Row -->
+      <div class="form-row-2col">
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" class="form-input" placeholder="Min. 6 characters" required minlength="6">
+          </div>
+          <div class="field-error-msg" id="password-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password *</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+            <input type="password" id="confirmPassword" class="form-input" placeholder="Repeat password" required>
+          </div>
+          <div class="field-error-msg" id="confirmPassword-error"></div>
+        </div>
+      </div>
+
+      <!-- Terms & Conditions Checkbox -->
+      <div class="form-group">
+        <label class="checkbox-label" for="terms">
+          <input type="checkbox" id="terms" required>
+          <span>I agree to the <a href="#" onclick="alert('StudentHub Terms: Free educational platform for college students. Data is stored locally in your browser.'); return false;" style="color:var(--primary); font-weight:600;">Terms & Conditions</a> and Honor Code.</span>
+        </label>
+        <div class="field-error-msg" id="terms-error"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top:0.5rem;">
+        <i class="fa-solid fa-user-plus"></i> Create Student Account
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      Already have an account? <a href="login.html">Login here</a>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

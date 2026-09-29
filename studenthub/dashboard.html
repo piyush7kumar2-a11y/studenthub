@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | StudentHub - College Learning Space</title>
+  <meta name="description" content="Track your course completion, active streak, learning hours, and interactive lessons on StudentHub.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body class="page-dashboard">
+
+  <!-- ================= Navigation Bar ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="StudentHub Home">
+        <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">Student<span>Hub</span></div>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="search-trigger-btn" aria-label="Search resources">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="nav-auth-actions">
+          <!-- Populated by auth.js -->
+        </div>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-page">
+    <div class="container">
+      <!-- Welcome Header -->
+      <div class="dashboard-welcome">
+        <div class="welcome-info">
+          <h1 id="dash-welcome-name">Welcome back, Student! 👋</h1>
+          <p id="dash-student-meta">Computer Science Engineering • 3rd Year</p>
+        </div>
+        <div style="display:flex; gap:0.75rem;">
+          <a href="courses.html" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-plus"></i> Enroll in New Course
+          </a>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="window.StudentHub.showToast('Your progress is automatically synced with localStorage.', 'info')">
+            <i class="fa-solid fa-arrows-rotate"></i> Sync Progress
+          </button>
+        </div>
+      </div>
+
+      <!-- Dashboard Statistics Cards (4 Cards) -->
+      <div class="dashboard-stats-grid">
+        <!-- 1. Courses Enrolled -->
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon" style="background:#eef2ff; color:#4f46e5;">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </div>
+          <div class="dash-stat-info">
+            <h3 id="stat-enrolled">4</h3>
+            <p>Courses Enrolled</p>
+          </div>
+        </div>
+
+        <!-- 2. Courses Completed -->
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon" style="background:#ecfdf5; color:#10b981;">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div class="dash-stat-info">
+            <h3 id="stat-completed">1</h3>
+            <p>Courses Completed</p>
+          </div>
+        </div>
+
+        <!-- 3. Learning Hours -->
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon" style="background:#e0f2fe; color:#0284c7;">
+            <i class="fa-solid fa-stopwatch"></i>
+          </div>
+          <div class="dash-stat-info">
+            <h3 id="stat-hours">36 hrs</h3>
+            <p>Total Learning Hours</p>
+          </div>
+        </div>
+
+        <!-- 4. Current Streak -->
+        <div class="dash-stat-card">
+          <div class="dash-stat-icon" style="background:#fff7ed; color:#ea580c;">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <div class="dash-stat-info">
+            <h3 id="stat-streak">7 Days 🔥</h3>
+            <p>Current Study Streak</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 10. Continue Learning Hero Card ================= -->
+      <div class="continue-learning-card">
+        <div class="continue-grid">
+          <div>
+            <span class="continue-tag"><i class="fa-solid fa-play"></i> In Progress</span>
+            <h2 class="continue-title" id="continue-course-title">Java Programming</h2>
+            <p class="continue-desc" id="continue-next-lesson">
+              Up Next: Collections Framework & Generics
+            </p>
+            <button type="button" class="btn btn-secondary btn-lg" id="btn-continue-learning" style="font-weight:700;">
+              Continue Learning <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <div class="continue-progress-box">
+            <div style="display:flex; justify-content:space-between; font-weight:700; font-size:0.95rem;">
+              <span>Course Completion</span>
+              <span id="continue-progress-percent">80% Completed</span>
+            </div>
+            <div class="progress-track" style="margin-block: 0.85rem;">
+              <div class="progress-fill" id="continue-progress-bar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:#c7d2fe;">
+              <span>28 Lessons Completed</span>
+              <span>7 Lessons Remaining</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Dashboard 2-Column Section -->
+      <div class="dashboard-layout-2col">
+        <!-- Left Column: Interactive Syllabus Checklist for Active Course -->
+        <div class="dash-panel">
+          <div class="panel-title-row">
+            <div>
+              <h2>Interactive Lesson Checklist</h2>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.2rem;">
+                Check lessons off as you study. Your progress updates live and persists across visits!
+              </p>
+            </div>
+            <span class="topic-badge badge-intermediate">Java Mastery</span>
+          </div>
+
+          <div class="lessons-checklist" id="dash-syllabus-list">
+            <!-- Populated dynamically by dashboard.js -->
+          </div>
+        </div>
+
+        <!-- Right Column: Enrolled Courses List & Learning Streak Calendar -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <!-- Enrolled Courses -->
+          <div class="dash-panel">
+            <div class="panel-title-row">
+              <h2>My Enrolled Courses</h2>
+              <a href="courses.html" style="font-size:0.85rem; font-weight:600; color:var(--primary);">View All</a>
+            </div>
+            <div id="dash-enrolled-list">
+              <!-- Populated dynamically by dashboard.js -->
+            </div>
+          </div>
+
+          <!-- Study Streak Motivation & Tips -->
+          <div class="dash-panel" style="background:var(--grad-card);">
+            <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+              <i class="fa-solid fa-medal" style="color:var(--accent-amber); font-size:1.4rem;"></i>
+              <h3 style="font-size:1.1rem; font-weight:700;">Student Milestone</h3>
+            </div>
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.5; margin-bottom:1rem;">
+              You have completed 42 lessons and maintained a 7-day study streak! Complete 3 more lessons to unlock the <strong>DSA Problem Solving Badge</strong>.
+            </p>
+            <button type="button" class="btn btn-outline btn-sm" style="width:100%;" onclick="window.StudentHub.showToast('Certificate generator unlocks when course reaches 100%! 🎓', 'info')">
+              <i class="fa-solid fa-award"></i> View Course Certificates
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="brand-text">Student<span style="color:#818cf8;">Hub</span></div>
+          </a>
+          <p class="footer-tagline">"Learn. Practice. Build. Grow."</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="mailto:support@studenthub.edu">Helpdesk</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Stay Connected</h4>
+          <p>College engineering updates & placement problem sets.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 StudentHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-magnifying-glass" style="color:var(--primary); margin-right:0.5rem;"></i> Search StudentHub</h3>
+        <button type="button" class="modal-close-btn" id="search-modal-close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" style="padding-top:1rem;">
+        <div class="search-box-large" style="margin-bottom:1rem;">
+          <i class="fa-solid fa-magnifying-glass search-icon-left"></i>
+          <input type="text" id="modal-search-input" class="search-input-field" placeholder="Type language, course, video, or note...">
+        </div>
+        <div id="modal-search-results" style="max-height:360px; overflow-y:auto;"></div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="back-to-top" id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

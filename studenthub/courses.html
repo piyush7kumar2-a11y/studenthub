@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses Catalog | StudentHub - College Learning Platform</title>
+  <meta name="description" content="Explore college-aligned courses in C, C++, Java, Python, Web Development, and Data Structures & Algorithms.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body class="page-courses">
+
+  <!-- ================= Navigation Bar ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="StudentHub Home">
+        <div class="brand-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">Student<span>Hub</span></div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#topics" class="nav-link">Topics</a>
+        <a href="courses.html" class="nav-link active">Courses</a>
+        <a href="index.html#videos" class="nav-link">Videos</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="signup.html" class="nav-link">Sign Up</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="search-trigger-btn" aria-label="Search resources">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="nav-auth-actions">
+          <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+        </div>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Course Catalog Header Banner -->
+    <section class="section" style="padding-bottom: 2.5rem; background: var(--grad-hero);">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-badge"><i class="fa-solid fa-graduation-cap"></i> Academic Catalog</span>
+          <h1 class="section-title">All Coding Courses</h1>
+          <p class="section-subtitle">
+            Industry-vetted, college-aligned curricula engineered to help you master programming syntax, data structures, algorithms, and software development.
+          </p>
+        </div>
+
+        <!-- Filter Controls Row -->
+        <div style="max-width: 900px; margin-inline: auto; display: flex; flex-direction: column; gap: 1.25rem;">
+          <!-- Search in Catalog -->
+          <div class="search-box-large">
+            <i class="fa-solid fa-magnifying-glass search-icon-left"></i>
+            <input type="text" id="course-filter-input" class="search-input-field" placeholder="Search by course name, keyword, or instructor...">
+          </div>
+
+          <!-- Category and Level Filters -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div class="topics-tabs" style="margin-bottom: 0;">
+              <button type="button" class="tab-btn active" data-filter-cat="all">All</button>
+              <button type="button" class="tab-btn" data-filter-cat="programming">Programming</button>
+              <button type="button" class="tab-btn" data-filter-cat="web">Web Dev</button>
+              <button type="button" class="tab-btn" data-filter-cat="cs">Core CS</button>
+              <button type="button" class="tab-btn" data-filter-cat="tools">Dev Tools</button>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <label for="difficulty-select" style="font-size: 0.875rem; font-weight: 600; color: var(--text-secondary);">Level:</label>
+              <select id="difficulty-select" class="form-input" style="padding: 0.4rem 0.8rem; width: auto; font-size: 0.875rem;">
+                <option value="all">All Levels</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Grid Section -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="courses-grid" id="courses-catalog-container">
+          <!-- 1. Complete C Programming -->
+          <div class="course-card" data-category="programming" data-level="Beginner">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #4338ca 0%, #312e81 100%);">
+              <span class="course-difficulty-badge">Beginner</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-solid fa-c course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:var(--primary); text-transform:uppercase;">Programming</span>
+                <div class="course-rating"><i class="fa-solid fa-star"></i> <span>4.9 (1,420)</span></div>
+              </div>
+              <h3>Complete C Programming</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Prof. R. K. Sharma</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 25 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 18 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header"><span>Status</span> <span>Completed</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 100%;"></div></div>
+              </div>
+              <div class="course-footer" style="display:flex; gap:0.5rem;">
+                <button type="button" class="btn btn-outline btn-sm" style="flex:1;" data-view-syllabus data-course-id="c-programming" data-title="Complete C Programming" data-level="Beginner" data-lessons="25 Lessons" data-topics="Variables, Loops, Functions, Arrays, Pointers, Memory Allocation">Syllabus</button>
+                <button type="button" class="btn btn-primary btn-sm" style="flex:1;" data-course-enroll data-course-id="c-programming" data-course-title="Complete C Programming">Start Course</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. C++ Language -->
+          <div class="course-card" data-category="programming" data-level="Intermediate">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #0284c7 0%, #082f49 100%);">
+              <span class="course-difficulty-badge">Intermediate</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-solid fa-laptop-code course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#0284c7; text-transform:uppercase;">OOP & Systems</span>
+                <div class="course-rating"><i class="fa-solid fa-star"></i> <span>4.9 (1,920)</span></div>
+              </div>
+              <h3>C++ Object-Oriented Mastery</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Prof. R. K. Sharma</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 30 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 24 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header"><span>Completion</span> <span>60%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 60%;"></div></div>
+              </div>
+              <div class="course-footer" style="display:flex; gap:0.5rem;">
+                <button type="button" class="btn btn-outline btn-sm" style="flex:1;" data-view-syllabus data-course-id="cpp-programming" data-title="C++ Object-Oriented Mastery" data-level="Intermediate" data-lessons="30 Lessons" data-topics="OOP, Classes, Inheritance, Polymorphism, Templates, STL">Syllabus</button>
+                <button type="button" class="btn btn-primary btn-sm" style="flex:1;" data-course-enroll data-course-id="cpp-programming" data-course-title="C++ Object-Oriented Mastery">Start Course</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Java Programming -->
+          <div class="course-card" data-category="programming" data-level="Intermediate">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%);">
+              <span class="course-difficulty-badge">Intermediate</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-brands fa-java course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#ea580c; text-transform:uppercase;">Software Dev</span>
+                <div class="course-rating"><i class="fa-solid fa-star"></i> <span>4.9 (2,850)</span></div>
+              </div>
+              <h3>Java Programming</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Dr. Priya Nair</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 35 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 28 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header"><span>Your Progress</span> <span>80%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+              </div>
+              <div class="course-footer" style="display:flex; gap:0.5rem;">
+                <button type="button" class="btn btn-outline btn-sm" style="flex:1;" data-view-syllabus data-course-id="java-programming" data-title="Java Programming" data-level="Intermediate" data-lessons="35 Lessons" data-topics="OOP, Collections, Exceptions, Generics, Stream API">Syllabus</button>
+                <button type="button" class="btn btn-primary btn-sm" style="flex:1;" data-course-enroll data-course-id="java-programming" data-course-title="Java Programming">Continue</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Python for Beginners -->
+          <div class="course-card" data-category="programming" data-level="Beginner">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
+              <span class="course-difficulty-badge">Beginner</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-brands fa-python course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#0284c7; text-transform:uppercase;">Data & Scripting</span>
+                <div class="course-rating"><i class="fa-solid fa-star"></i> <span>4.8 (3,120)</span></div>
+              </div>
+              <h3>Python for Beginners</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Dr. Ananya Sen</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 28 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 20 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header"><span>Completion</span> <span>45%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 45%;"></div></div>
+              </div>
+              <div class="course-footer" style="display:flex; gap:0.5rem;">
+                <button type="button" class="btn btn-outline btn-sm" style="flex:1;" data-view-syllabus data-course-id="python-beginners" data-title="Python for Beginners" data-level="Beginner" data-lessons="28 Lessons" data-topics="Functions, Lists, Dictionaries, Modules, File Handling, OOP">Syllabus</button>
+                <button type="button" class="btn btn-primary btn-sm" style="flex:1;" data-course-enroll data-course-id="python-beginners" data-course-title="Python for Beginners">Start Course</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Data Structures & Algorithms -->
+          <div class="course-card" data-category="cs" data-level="Advanced">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%);">
+              <span class="course-difficulty-badge">Advanced</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-solid fa-network-wired course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#7c3aed; text-transform:uppercase;">Placements</span>
+                <div class="course-rating"><i class="fa-solid fa-star"></i> <span>5.0 (4,210)</span></div>
+              </div>
+              <h3>Data Structures & Algorithms</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Vikram Malhotra (FAANG Mentor)</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 50 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 45 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header"><span>Placement Ready</span> <span>44%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 44%;"></div></div>
+              </div>
+              <div class="course-footer" style="display:flex; gap:0.5rem;">
+                <button type="button" class="btn btn-outline btn-sm" style="flex:1;" data-view-syllabus data-course-id="dsa-mastery" data-title="Data Structures & Algorithms" data-level="Advanced" data-lessons="50 Lessons" data-topics="Arrays, Linked Lists, Stacks, Queues, Binary Trees, Graphs, DP">Syllabus</button>
+                <button type="button" class="btn btn-primary btn-sm" style="flex:1;" data-course-enroll data-course-id="dsa-mastery" data-course-title="Data Structures & Algorithms">Start Course</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Full Stack Web Development -->
+          <div class="course-card" data-category="web" data-level="Beginner">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #059669 0%, #064e3b 100%);">
+              <span class="course-difficulty-badge">Beginner</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-solid fa-code course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#10b981; text-transform:uppercase;">Web Systems</span>
+                <div class="course-rating"><i class="fa-solid fa-star"></i> <span>4.9 (1,890)</span></div>
+              </div>
+              <h3>Full Stack Web Development</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Karan Verma</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 40 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 32 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header"><span>Project Track</span> <span>35%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 35%;"></div></div>
+              </div>
+              <div class="course-footer" style="display:flex; gap:0.5rem;">
+                <button type="button" class="btn btn-outline btn-sm" style="flex:1;" data-view-syllabus data-course-id="web-dev" data-title="Full Stack Web Development" data-level="Beginner" data-lessons="40 Lessons" data-topics="HTML, CSS, JavaScript, React, APIs, Backend Basics">Syllabus</button>
+                <button type="button" class="btn btn-primary btn-sm" style="flex:1;" data-course-enroll data-course-id="web-dev" data-course-title="Full Stack Web Development">Start Course</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. DBMS & SQL -->
+          <div class="course-card" data-category="cs" data-level="Intermediate">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #0d9488 0%, #134e4a 100%);">
+              <span class="course-difficulty-badge">Intermediate</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-solid fa-database course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:#0d9488; text-transform:uppercase;">Data Storage</span>
+                <div class="course-rating"><i class="fa-solid fa-star"></i> <span>4.8 (1,150)</span></div>
+              </div>
+              <h3>Database Management Systems (DBMS)</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Dr. Sandeep Rao</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 26 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 20 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header"><span>Progress</span> <span>25%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 25%;"></div></div>
+              </div>
+              <div class="course-footer" style="display:flex; gap:0.5rem;">
+                <button type="button" class="btn btn-outline btn-sm" style="flex:1;" data-view-syllabus data-course-id="cs-dbms" data-title="Database Management Systems" data-level="Intermediate" data-lessons="26 Lessons" data-topics="Relational Model, SQL Queries, Joins, Normalization, Transactions">Syllabus</button>
+                <button type="button" class="btn btn-primary btn-sm" style="flex:1;" data-course-enroll data-course-id="cs-dbms" data-course-title="Database Management Systems">Start Course</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Git & GitHub -->
+          <div class="course-card" data-category="tools" data-level="Beginner">
+            <div class="course-thumbnail" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+              <span class="course-difficulty-badge">Beginner</span>
+              <div class="course-thumb-overlay"></div>
+              <i class="fa-brands fa-github course-thumb-icon"></i>
+            </div>
+            <div class="course-card-content">
+              <div class="course-header">
+                <span style="font-size:0.8rem; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Dev Tools</span>
+                <div class="course-rating"><i class="fa-solid fa-star"></i> <span>4.9 (980)</span></div>
+              </div>
+              <h3>Git & GitHub Version Control</h3>
+              <div class="instructor-row">
+                <div class="instructor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="instructor-name">Neha Kapoor</div>
+              </div>
+              <div class="course-meta-pills">
+                <span><i class="fa-solid fa-book-open"></i> 18 Lessons</span>
+                <span><i class="fa-solid fa-clock"></i> 12 Hours</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="progress-header"><span>Completion</span> <span>60%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 60%;"></div></div>
+              </div>
+              <div class="course-footer" style="display:flex; gap:0.5rem;">
+                <button type="button" class="btn btn-outline btn-sm" style="flex:1;" data-view-syllabus data-course-id="tools-git" data-title="Git & GitHub Version Control" data-level="Beginner" data-lessons="18 Lessons" data-topics="Version Control, Branching, Merging, Pull Requests, Git Rebase">Syllabus</button>
+                <button type="button" class="btn btn-primary btn-sm" style="flex:1;" data-course-enroll data-course-id="tools-git" data-course-title="Git & GitHub Version Control">Start Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="brand-text">Student<span style="color:#818cf8;">Hub</span></div>
+          </a>
+          <p class="footer-tagline">"Learn. Practice. Build. Grow."</p>
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="index.html#topics">Topics</a></li>
+            <li><a href="index.html#videos">Videos</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="mailto:support@studenthub.edu">Contact</a></li>
+            <li><a href="resources.html">Help & Notes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for weekly problem sets and study guides.</p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" placeholder="student@college.edu" class="newsletter-input" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 StudentHub. All rights reserved.</p>
+        <p>Built with ❤️ for college students worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-magnifying-glass" style="color:var(--primary); margin-right:0.5rem;"></i> Search StudentHub</h3>
+        <button type="button" class="modal-close-btn" id="search-modal-close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" style="padding-top:1rem;">
+        <div class="search-box-large" style="margin-bottom:1rem;">
+          <i class="fa-solid fa-magnifying-glass search-icon-left"></i>
+          <input type="text" id="modal-search-input" class="search-input-field" placeholder="Type language, course, video, or note...">
+        </div>
+        <div id="modal-search-results" style="max-height:360px; overflow-y:auto;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course Syllabus Modal -->
+  <div class="modal-overlay" id="course-details-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-course-title">Course Syllabus</h3>
+        <button type="button" class="modal-close-btn" data-modal-close><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-course-meta" style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1rem;"></div>
+        <h4 style="font-size:1rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">Topics Covered:</h4>
+        <div id="modal-course-topics" style="background:var(--bg-body); border-radius:var(--radius-md); padding:1rem; border:1px solid var(--border-color);"></div>
+        <div style="margin-top:1.5rem; display:flex; justify-content:flex-end; gap:0.75rem;">
+          <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
+          <button type="button" class="btn btn-primary btn-sm" id="modal-course-enroll" data-course-enroll>Start Course Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="back-to-top" id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Filter Script for Courses Catalog -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('course-filter-input');
+      const catTabs = document.querySelectorAll('[data-filter-cat]');
+      const levelSelect = document.getElementById('difficulty-select');
+      const courseCards = document.querySelectorAll('#courses-catalog-container .course-card');
+
+      let currentCat = 'all';
+      let currentLevel = 'all';
+      let currentQuery = '';
+
+      // URL param filter check
+      const urlParams = new URLSearchParams(window.location.search);
+      const paramFilter = urlParams.get('filter');
+      if (paramFilter) {
+        if (paramFilter === 'c' || paramFilter === 'cpp' || paramFilter === 'java' || paramFilter === 'python') {
+          currentCat = 'programming';
+        } else if (paramFilter === 'web') {
+          currentCat = 'web';
+        } else if (paramFilter === 'dsa' || paramFilter === 'cs') {
+          currentCat = 'cs';
+        } else if (paramFilter === 'tools') {
+          currentCat = 'tools';
+        }
+
+        catTabs.forEach(t => {
+          if (t.getAttribute('data-filter-cat') === currentCat) {
+            t.classList.add('active');
+          } else {
+            t.classList.remove('active');
+          }
+        });
+      }
+
+      function filterCards() {
+        courseCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          const cardLevel = card.getAttribute('data-level');
+          const cardText = card.textContent.toLowerCase();
+
+          const matchesCat = (currentCat === 'all' || cardCat === currentCat);
+          const matchesLevel = (currentLevel === 'all' || cardLevel === currentLevel);
+          const matchesQuery = (!currentQuery || cardText.includes(currentQuery));
+
+          if (matchesCat && matchesLevel && matchesQuery) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      catTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          catTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentCat = tab.getAttribute('data-filter-cat');
+          filterCards();
+        });
+      });
+
+      if (levelSelect) {
+        levelSelect.addEventListener('change', (e) => {
+          currentLevel = e.target.value;
+          filterCards();
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.toLowerCase().trim();
+          filterCards();
+        });
+      }
+
+      filterCards();
+    });
+  </script>
+</body>
+</html>
